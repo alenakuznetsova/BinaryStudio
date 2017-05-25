@@ -20,7 +20,7 @@ class Fighter{
 }
 
 class ImprovedFighter extends Fighter {  
-  hit(enemy,point) {
+  hit(enemy,point=10) {
     super.hit(enemy, point * 2);
   }
 }
@@ -46,6 +46,6 @@ let fight = (fighter1, fighter2, ...points) => {
 let fighter = new Fighter('Tom', 4, 75);
 let improvedFighter = new ImprovedFighter('Jack', 2, 150);
 
-let result = `Winner is ${fight(fighter, improvedFighter,...[10])}`;
+let result = `Winner is ${fight(fighter, improvedFighter,...[10,20,30,40])}`;
 
 console.log(result);

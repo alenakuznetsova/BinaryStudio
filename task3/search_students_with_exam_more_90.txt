@@ -1,0 +1,5 @@
+ 
+query for search all students, which have type: "exam" > 90%
+
+db.data.aggregate([{$unwind: "$scores"}, {$match: {"scores.type": "exam" , "scores.score": {$gt:90} }}]).pretty()
+

@@ -1,0 +1,4 @@
+
+query for search all students, which have score > 87% and < 93% :
+
+db.data.find({ "scores.score" : {$gt: 83, $lt: 97}}).pretty()

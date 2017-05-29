@@ -1,0 +1,8 @@
+
+Add for students with name Dusti Lemmond new field “accepted” = true
+
+
+db.data.update({name:"Dusti Lemmond"}, {$set: {accepted: true}}, {multi: true}), 
+
+после выполнения запроса, следует ввести db.data.find({"name": "Dusti Lemmond"}).pretty(), чтобы увидеть результат работы
+
